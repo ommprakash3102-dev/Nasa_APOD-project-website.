@@ -4,11 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
     <title>Nasa APOD Project</title>
   </head>
   <body>
-    <label for="datepicker">Select a date:</label>
-    <input type="date" id="datepicker" />
+    <button
+      id="menu-toggle"
+      class="hamburger-menu"
+      type="button"
+      aria-label="Toggle date selector"
+      aria-controls="controlsContainer"
+      aria-expanded="false"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+    <div class="controls-container" id="controlsContainer">
+      <label for="datepicker">Select a date:</label>
+      <input type="date" id="datepicker" />
+      <button id="refresh-btn"><span>Refresh</span></button>
+    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Righteous&display=swap" rel="stylesheet">
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
