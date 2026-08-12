@@ -8,21 +8,10 @@
     <title>Nasa APOD Project</title>
   </head>
   <body>
-    <button
-      id="menu-toggle"
-      class="hamburger-menu"
-      type="button"
-      aria-label="Toggle date selector"
-      aria-controls="controlsContainer"
-      aria-expanded="false"
-    >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </button>
     <div class="controls-container" id="controlsContainer">
-      <label for="datepicker">Select a date:</label>
+      <label id="datepicker-label" for="datepicker">Select a date:</label>
       <input type="date" id="datepicker" />
+      <br>
       <button id="refresh-btn"><span>Refresh</span></button>
     </div>
     <link rel="preconnect" href="https://fonts.googleapis.com">

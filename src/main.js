@@ -23,10 +23,29 @@ if (document.readyState === 'loading') {
 // 1. Create a reusable function to fetch APOD
 function getAPOD(date = null) {
   document.querySelector("#app").innerHTML = `
+  <link rel="stylesheet" href="src/styles.css">
     <div class="cosmic-loader">
-      <div class="loader-container">
-        <div class="infinity-symbol" aria-hidden="true">&infin;</div>
-        <p class="loading-text">Exploring the cosmos</p>
+      <div class="loader-container">:D</div>
+      <div 
+        <p class="loading-text">
+        <span>G</span>
+        <span>E</span>
+        <span>T</span>
+        <span>T</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+        <span>-</span>
+        <span>A</span>
+        <span>P</span>
+        <span>O</span>
+        <span>D</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        
+
+        </p>
       </div>
     </div>
   `;
