@@ -64,6 +64,25 @@ function getAPOD(date = null) {
   fetch(url)
     .then(response => response.json())
     .then(data => {
+      console.log("Full API Response:", data);
+      
+      // Check if API returned an error
+      if (data.error) {
+        document.querySelector("#app").innerHTML = `
+          <p class="error">NASA hasn't published today's APOD yet. ${data.error.message}</p>
+          <p>Try selecting a previous date.</p>
+        `;
+        return;
+      }
+      
+      // Check if required fields exist
+      if (!data.title || !data.url) {
+        document.querySelector("#app").innerHTML = `
+          <p>Unable to load today's APOD. NASA may still be processing it.</p>
+          <p>Try again later or select a previous date.</p>
+        `;
+        return;
+      }
       let media;
       if (data.media_type === "image") {
         media = `<img src="${data.url}"/>`;
