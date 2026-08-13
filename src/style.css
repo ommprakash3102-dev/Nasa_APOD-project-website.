@@ -130,3 +130,9 @@ p {
   font-size: 1rem;
   color: white;
 }
+
+h1 {
+  font-family:'Righteous', cursive;
+  font-size: 3rem;
+  color: white;
+}
